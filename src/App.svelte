@@ -1,10 +1,12 @@
 <script>
-    let word = "World";
+    import Inner from "./Nested.svelte";
     export let adjective;
+    let word = "World";
 </script>
 
 <h1>Hello {word}!!!</h1>
 <p>Hope you're having a {adjective} day</p>
+<Inner adjective="great" />
 
 <style>
     h1 {
