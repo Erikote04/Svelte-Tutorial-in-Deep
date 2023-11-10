@@ -1,9 +1,10 @@
 <script>
-    // Here goes the logic
+    let word = "World";
+    export let adjective;
 </script>
 
-<h1>Hello World!!!</h1>
-<p>Hope you're having a good day</p>
+<h1>Hello {word}!!!</h1>
+<p>Hope you're having a {adjective} day</p>
 
 <style>
     h1 {
