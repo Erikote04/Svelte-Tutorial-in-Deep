@@ -1,20 +1,16 @@
 <script>
-    let name = "";
-    function handle(e) {
-        const target = e.target;
-        name = e.target.value;
-    }
+    let tasks = [
+        "Cut the grass",
+        "Wash the dishes",
+        "Take out the trash"
+    ];
 </script>
 
-<input 
-    class="text" 
-    type="text" 
-    placeholder="Name" 
-    on:keyup={handle} 
-/>
+<h3>Tasks:</h3>
 
-{#if name.length === 0}
-    <p>Please enter your name</p>
-{:else}
-    <p>Hi, {name}. Your name has {name.length} characters</p>
-{/if}
+<ol>
+    {#each tasks as task}
+        <li>{task}</li>
+    {/each}
+</ol>
+
