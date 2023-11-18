@@ -13,10 +13,6 @@
     on:keyup={handle} 
 />
 
-<p>Hello, {name}. Your name has {name.length} characters</p>
+<button disabled={name.length === 0}>Send</button>
 
-<style>
-    .text {
-        font-size: 1.5rem;
-    }
-</style>
+<p>Hello, {name}. Your name has {name.length} characters</p>
