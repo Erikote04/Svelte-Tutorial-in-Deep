@@ -8,9 +8,8 @@
 
 <h3>Tasks:</h3>
 
-<ol>
-    {#each tasks as task}
-        <li>{task}</li>
-    {/each}
-</ol>
+{#each tasks as task, index}
+    <p><strong>{index}:</strong> {task}</p>
+{/each}
+
 
