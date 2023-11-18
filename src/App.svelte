@@ -10,8 +10,8 @@
 
 <h3>Tasks:</h3>
 
-{#each tasks as task}
-    <Task name={task.name} finished={task.finished} />
+{#each tasks as {name, finished}}
+    <Task {name} {finished} />
 {/each}
 
 
