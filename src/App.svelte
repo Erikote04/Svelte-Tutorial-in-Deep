@@ -13,6 +13,6 @@
     on:keyup={handle} 
 />
 
-<button disabled={name.length === 0}>Send</button>
-
-<p>Hello, {name}. Your name has {name.length} characters</p>
+{#if name.length === 0}
+    <p>Please enter your name</p>
+{/if}
