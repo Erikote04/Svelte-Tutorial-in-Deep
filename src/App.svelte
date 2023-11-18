@@ -15,4 +15,6 @@
 
 {#if name.length === 0}
     <p>Please enter your name</p>
+{:else}
+    <p>Hi, {name}. Your name has {name.length} characters</p>
 {/if}
