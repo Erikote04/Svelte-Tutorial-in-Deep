@@ -1,20 +1,17 @@
 <script>
-    import Button from "./Button.svelte";
+    import ButtonGroup from "./Button-Group.svelte";
 
     let times = 0;
-    let dates = [];
 
-    function isClicked(event) {
-        const date = event.detail.date;
-        dates = [...dates, date];
+    function startFromZero() {
+        times = 0;
+    }
+
+    function isClicked() {
         times += 1;
     }
 </script>
 
 <p>You've clicked me {times} {times === 1 ? "time" : "times"}</p>
 
-<Button on:clicked={isClicked}/>
-
-{#each dates as date}
-    <p>{date}</p>
-{/each}
+<ButtonGroup on:restarting={startFromZero} on:clicked={isClicked} />
