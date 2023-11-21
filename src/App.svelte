@@ -1,12 +1,14 @@
 <script>
-    let continents = ["Africa", "Antartica", "Asia", "Europe", "North America", "Oceania", "South America"];
-    let continent = "Asia";
+    let input;
+
+    function focus() {
+        input ? input.focus() : console.log("input does't exist");
+        console.log("Search button clicked");
+    }
 </script>
 
-<p>You've select {continent}</p>
-
-<select bind:value={continent}>
-    {#each continents as c}
-        <option value={c}>{c}</option>
-    {/each}
-</select>
+<input 
+    type="text" 
+    placeholder="What are you looking for?"
+    bind:this={input}>
+<button type="button" on:click={focus}>Search</button>
