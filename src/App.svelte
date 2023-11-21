@@ -1,6 +1,17 @@
 <script>
-    let name = "Erik"
+    let accept = false;
 </script>
 
-<p>Your name is {name}</p>
-<p><input type="text" bind:value={name}></p>
+{#if accept}
+    <p>She said YES!!!</p>
+{:else}
+    <p>She said no... I'm going to the gym</p>
+{/if}
+
+<p>
+    <label>Change my value (her decision)</label>
+    <input 
+        type="checkbox" 
+        bind:checked={accept}
+    >
+</p>
