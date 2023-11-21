@@ -1,17 +1,12 @@
 <script>
-    let accept = false;
+    let continents = ["Africa", "Antartica", "Asia", "Europe", "North America", "Oceania", "South America"];
+    let continent = "Asia";
 </script>
 
-{#if accept}
-    <p>She said YES!!!</p>
-{:else}
-    <p>She said no... I'm going to the gym</p>
-{/if}
+<p>You've select {continent}</p>
 
-<p>
-    <label>Change my value (her decision)</label>
-    <input 
-        type="checkbox" 
-        bind:checked={accept}
-    >
-</p>
+<select bind:value={continent}>
+    {#each continents as c}
+        <option value={c}>{c}</option>
+    {/each}
+</select>
