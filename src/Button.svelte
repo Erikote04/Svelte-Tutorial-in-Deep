@@ -4,7 +4,11 @@
     let dispatch = createEventDispatcher();
 
     function click() {
-        dispatch("clicked")
+        let timestamp = new Date();
+        let now = timestamp.toLocaleString();
+        dispatch("clicked", {
+            date: now
+        });
     }   
 </script>
 
