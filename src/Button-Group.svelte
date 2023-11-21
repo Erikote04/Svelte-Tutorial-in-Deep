@@ -7,12 +7,8 @@
     function restart() {
         dispatch("restarting");
     }
-
-    function propagate() {
-        dispatch("clicked");
-    }
 </script>
 
-<Button on:clicked={propagate}/>
+<Button on:clicked />
 
 <button type="button" on:click={restart}>Restart</button>
