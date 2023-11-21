@@ -1,14 +1,13 @@
 <script>
-    let input;
+    import Button from "./Button.svelte";
 
-    function focus() {
-        input ? input.focus() : console.log("input does't exist");
-        console.log("Search button clicked");
+    let times = 0;
+
+    function isClicked () {
+        times += 1;
     }
 </script>
 
-<input 
-    type="text" 
-    placeholder="What are you looking for?"
-    bind:this={input}>
-<button type="button" on:click={focus}>Search</button>
+<p>You've clicked me {times} {times === 1 ? "time" : "times"}</p>
+
+<Button on:clicked={isClicked}/>
