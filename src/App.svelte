@@ -15,6 +15,8 @@
 
     let fields = ['Backend', 'Frontend', 'Devops', 'QA'];
 
+    let error = null;
+
     function send() {
         alert(JSON.stringify(userData))
     }
@@ -22,6 +24,9 @@
     function updateSalary(e) {
         userData.salary.min = e.detail.min;
         userData.salary.max = e.detail.max;
+        userData.salary.min > userData.salary.max 
+            ? error = "Min can't be greater than Max"
+            : error = null;
     }
 </script>
 
@@ -51,7 +56,13 @@
             on:update={updateSalary}
         />
         <p>
-            <input type="submit" value="Send">
+            {#if error !== null}
+                <input 
+                    type="submit" 
+                    value="Send" 
+                    disabled={error !== null}
+                />
+            {/if}
         </p>
     </form>
 </main>

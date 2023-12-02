@@ -10,5 +10,5 @@
         type = "text" 
         id = {identifier} 
         bind:value
-    >
+    />
 </p>
