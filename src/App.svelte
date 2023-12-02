@@ -1,4 +1,6 @@
 <script>
+    import Input from "./lib/Input.svelte";
+    
     let userData = {
         name: "Erik",
         firstName: "Sebastián de Erice",
@@ -16,14 +18,16 @@
 
 <main>
     <form on:submit|preventDefault={send}>
-        <p>
-            <label for="name">Name: </label>
-            <input type="text" id="name" bind:value={userData.name}>
-        </p>
-        <p>
-            <label for="firstName">First name: </label>
-            <input type="text" id="firstName" bind:value={userData.firstName}>
-        </p>
+        <Input
+            identifier = "name"
+            formField = "Name"
+            bind:value = {userData.name}
+        />
+        <Input
+            identifier = "firstName"
+            formField = "First name"
+            bind:value = {userData.firstName}
+        />
         <p>
             <input type="submit" value="Send">
         </p>
