@@ -1,17 +1,31 @@
 <script>
-    import ButtonGroup from "./Button-Group.svelte";
-
-    let times = 0;
-
-    function startFromZero() {
-        times = 0;
+    let userData = {
+        name: "Erik",
+        firstName: "Sebastián de Erice",
+        field: "Frontend",
+        salary: {
+            min: 18000,
+            max: 21000
+        }
     }
 
-    function isClicked() {
-        times += 1;
+    function send() {
+        alert(JSON.stringify(userData))
     }
 </script>
 
-<p>You've clicked me {times} {times === 1 ? "time" : "times"}</p>
-
-<ButtonGroup on:restarting={startFromZero} on:clicked={isClicked} />
+<main>
+    <form on:submit|preventDefault={send}>
+        <p>
+            <label for="name">Name: </label>
+            <input type="text" id="name" bind:value={userData.name}>
+        </p>
+        <p>
+            <label for="firstName">First name: </label>
+            <input type="text" id="firstName" bind:value={userData.firstName}>
+        </p>
+        <p>
+            <input type="submit" value="Send">
+        </p>
+    </form>
+</main>
