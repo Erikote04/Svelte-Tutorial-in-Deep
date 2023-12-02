@@ -1,6 +1,7 @@
 <script>
     import Input from "./lib/Input.svelte";
     import Select from "./lib/Select.svelte";
+    import Range from "./lib/Range.svelte";
     
     let userData = {
         name: "Erik",
@@ -16,6 +17,11 @@
 
     function send() {
         alert(JSON.stringify(userData))
+    }
+
+    function updateSalary(e) {
+        userData.salary.min = e.detail.min;
+        userData.salary.max = e.detail.max;
     }
 </script>
 
@@ -36,6 +42,13 @@
             formField = "Field"
             choices = {fields}
             bind:value = {userData.field}
+        />
+        <Range
+            identifier = "salary"
+            formField = "Salary"
+            min = {userData.salary.min}
+            max = {userData.salary.max}
+            on:update={updateSalary}
         />
         <p>
             <input type="submit" value="Send">

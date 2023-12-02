@@ -6,5 +6,9 @@
 
 <p>
     <label for={identifier}>{formField}: </label>
-    <input type="text" id={identifier} bind:value>
+    <input 
+        type = "text" 
+        id = {identifier} 
+        bind:value
+    >
 </p>
