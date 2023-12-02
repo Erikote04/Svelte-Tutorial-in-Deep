@@ -57,12 +57,13 @@
         />
         <p>
             {#if error !== null}
-                <input 
-                    type="submit" 
-                    value="Send" 
-                    disabled={error !== null}
-                />
+                <p>{error}</p>
             {/if}
+            <input 
+                type="submit" 
+                value="Send" 
+                disabled={error !== null}
+            />
         </p>
     </form>
 </main>
