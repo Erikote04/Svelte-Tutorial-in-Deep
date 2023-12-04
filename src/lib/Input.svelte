@@ -5,7 +5,7 @@
     let id = "_" + label.toLowerCase();
 </script>
 
-<p class={value.length > 0 ? 'valid' : 'invalid'}>
+<p class:invalid={value.length === 0}>
     <label class="label" for={id}>{label}: </label>
     <input 
         type = "text" 
