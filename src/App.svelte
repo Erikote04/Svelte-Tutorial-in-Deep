@@ -1,22 +1,7 @@
 <script>
-    import Input from "./lib/Input.svelte";
-
-    let name = "John";
-    let firstName = "Doe";
+    import ColorPicker from "./lib/ColorPicker.svelte";
 </script>
 
 <main>
-    <fieldset>
-        <Input bind:value={name} label="Name"/>
-        <Input bind:value={firstName} label="Firstname"/>
-    </fieldset>
-    <p class="label">You are <strong>{name} {firstName}</strong></p>
+    <ColorPicker />
 </main>
-
-<style>
-    .label {
-        color: blue;
-        font-size: 1.3rem;
-        text-decoration: underline;
-    }
-</style>
