@@ -1,4 +1,6 @@
 <script>
+    import "./assets/global.css";
+    import "normalize.css/normalize.css";
     import Input from "./lib/Input.svelte";
 
     let name = "John";
@@ -13,14 +15,5 @@
 </main>
 
 <style>
-    :global(*) {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    :global(body) {
-        font-family:'Courier New', Courier, monospace;
-        font-size: 24px;
-    }
+
 </style>

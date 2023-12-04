@@ -27,10 +27,6 @@
 </p>
 
 <style>
-    :global(.label) {
-        color: blue;
-    }
-    
     .label {
         font-weight: bold;
     }
