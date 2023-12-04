@@ -3,7 +3,7 @@
     export let value = colors[0];
 </script>
 
-<p class="color" style:color={value}>{value}</p>
+<p class="color" style:--txtcolor={value}>{value}</p>
 
 <select bind:value>
     {#each colors as color}
@@ -13,6 +13,7 @@
 
 <style>
     .color {
+        color: var(--txtcolor);
         font-size: 40px;
         font-weight: bold;
         margin: 0;
