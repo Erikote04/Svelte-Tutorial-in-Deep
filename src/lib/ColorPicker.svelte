@@ -3,7 +3,7 @@
     export let value = colors[0];
 </script>
 
-<p class="color" style={`color: ${value};`}>{value}</p>
+<p class="color" style:color={value}>{value}</p>
 
 <select bind:value>
     {#each colors as color}
