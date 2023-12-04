@@ -1,14 +1,21 @@
 <script>
-    export let identifier;
-    export let formField;
+    export let label;
     export let value;
+
+    let id = "_" + label.toLowerCase();
 </script>
 
 <p>
-    <label for={identifier}>{formField}: </label>
+    <label class="label" for={id}>{label}: </label>
     <input 
         type = "text" 
-        id = {identifier} 
+        id = {id} 
         bind:value
     />
 </p>
+
+<style>
+    .label {
+        font-weight: bold;
+    }
+</style>
