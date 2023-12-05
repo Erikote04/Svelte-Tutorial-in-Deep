@@ -4,8 +4,10 @@
 
 <main>
     <Section title="Menu of the Day">
-        <p slot="main">Taco Tuesday</p>
-        <p slot="main">Margaritas</p>
-        <p slot="main">Nachos with cheese</p>
+        <div slot="main">
+            <p>Taco Tuesday</p>
+            <p>Margaritas</p>
+            <p>Nachos with cheese</p>
+        </div>
     </Section>
 </main>
