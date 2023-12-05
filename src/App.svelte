@@ -3,7 +3,11 @@
 
     let name = "John";
     let firstName = "Doe";
-    let completeName = name + " " + firstName; // This statement is executed only once, so it will not have changes even if the variables that compose it change.
+    let completeName; 
+    $: {
+        completeName = name + " " + firstName;
+    }
+    // $ is used to make reactive blocks. Now every time that any of the variables changes, as the variable changes completely, the reactive block will be re-evaluated 
 </script>
 
 <main>
